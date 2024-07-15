@@ -4,13 +4,15 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.chains import SimpleSequentialChain
 from langchain.chains import LLMChain
 from langchain.globals import set_debug
+set_debug(True)
 import os
 from dotenv import load_dotenv
 from langchain_core.pydantic_v1 import Field, BaseModel
 from langchain_core.output_parsers import JsonOutputParser
 
 load_dotenv()
-set_debug(True)
+
+
 
 class Destino(BaseModel):
     cidade = Field("cidade a visitar")
